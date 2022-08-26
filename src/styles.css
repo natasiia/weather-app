@@ -23,6 +23,16 @@ body {
   padding: 30px;
 }
 
+#bottom-link {
+  margin-top: 10px;
+  margin-bottom: -20px;
+  text-align: center;
+}
+
+#bottom-link a {
+  text-decoration: none;
+}
+
 .card-main {
   margin: auto;
 }
