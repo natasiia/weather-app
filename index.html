@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="blurred-background">
+        <div class="card card-main" style="width: 20rem">
+          <div class="card-body">
+            <h3 class="card-title main-city">Dublin</h3>
+            <h6 id="current-time">11:44</h6>
+            <h6 class="card-subtitle mb-2 text-muted main-temperature">
+              <span id="main-temp">26</span><a id="celcius">°C /</a
+              ><a id="fahrenheit"> °F</a>
+            </h6>
+            <img
+              src="images/animated-icons/day.svg"
+              alt="Weather Icon"
+              class="weather-icon"
+            />
+
+            <p class="card-text day-today">Wednesday, July 27, 2022</p>
+          </div>
+        </div>
+        <div class="form-container">
+          <form>
+            <input type="text" placeholder="Choose a city!" />
+            <button type="submit" class="btn btn-light">Search</button>
+            <br />
+            <button type="submit" class="btn btn-success" id="button-location">
+              Current Location
+            </button>
+          </form>
+        </div>
+        <div class="row">
+          <div class="col-sm-3 all-cards">
+            <div class="card card-1 card-night" id="card11">
+              <div class="card-body">
+                <h5 class="card-title" id="next-day1">Thursday</h5>
+                <img
+                  src="images/animated-icons/rainy-1.svg"
+                  alt="Weather Icon"
+                />
+                <p class="card-text" id="small-temp1">26°C / 19°C</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card card-2 card-night" id="card12">
+              <div class="card-body">
+                <h5 class="card-title" id="next-day2">Friday</h5>
+                <img
+                  src="images/animated-icons/cloudy-day-3.svg"
+                  alt="Weather Icon"
+                />
+                <p class="card-text" id="small-temp2">26°C / 19°C</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card card-3 card-night" id="card13">
+              <div class="card-body">
+                <h5 class="card-title" id="next-day3">Saturday</h5>
+                <img
+                  src="images/animated-icons/cloudy.svg"
+                  alt="Weather Icon"
+                />
+                <p class="card-text" id="small-temp3">26°C / 19°C</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card card-4 card-night" id="card14">
+              <div class="card-body">
+                <h5 class="card-title" id="next-day4">Sunday</h5>
+                <img
+                  src="images/animated-icons/thunder.svg"
+                  alt="Weather Icon"
+                />
+                <p class="card-text" id="small-temp4">26°C / 19°C</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="temperature-scale"></div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
