@@ -68,6 +68,74 @@ function changeCityTemp(event) {
       (letter) => letter.toUpperCase()
     );
     weatherDescription.innerHTML = weatherWords;
+    let weatherNumber = response.data.weather[0].id;
+    console.log(weatherNumber);
+    let weatherIcon;
+    switch (weatherNumber) {
+      case (200, 201, 202, 210, 211, 212, 221, 230, 231, 232):
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/thunder.svg";
+        break;
+      case (300, 301, 302, 310, 311, 312, 313, 314, 321):
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/rainy-7.svg";
+        break;
+      case 500:
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/rainy-1.svg";
+        break;
+      case 501:
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/rainy-2.svg";
+        break;
+      case 502:
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/rainy-3.svg";
+        break;
+      case 503:
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/rainy-4.svg";
+        break;
+      case (504, 511):
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/rainy-5.svg";
+        break;
+      case (520, 521, 522, 531):
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/rainy-6.svg";
+        break;
+      case 600:
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/snowy-1.svg";
+        break;
+      case 601:
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/snowy-2.svg";
+        break;
+      case 602:
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/snowy-3.svg";
+        break;
+      case 611:
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/snowy-4.svg";
+        break;
+      case 612:
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/snowy-5.svg";
+        break;
+      case (613, 615, 616, 620, 621, 622):
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/snowy-6.svg";
+        break;
+      case 800:
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/day.svg";
+        break;
+      default:
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/cloudy.svg";
+    }
   }
 
   function changeSmallTemperature(response) {
@@ -143,6 +211,74 @@ function changeCityAndTemp(event) {
       (letter) => letter.toUpperCase()
     );
     weatherDescription.innerHTML = weatherWords;
+    let weatherNumber = response.data.weather[0].id;
+    console.log(weatherNumber);
+    let weatherIcon;
+    switch (weatherNumber) {
+      case (200, 201, 202, 210, 211, 212, 221, 230, 231, 232):
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/thunder.svg";
+        break;
+      case (300, 301, 302, 310, 311, 312, 313, 314, 321):
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/rainy-7.svg";
+        break;
+      case 500:
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/rainy-1.svg";
+        break;
+      case 501:
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/rainy-2.svg";
+        break;
+      case 502:
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/rainy-3.svg";
+        break;
+      case 503:
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/rainy-4.svg";
+        break;
+      case (504, 511):
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/rainy-5.svg";
+        break;
+      case (520, 521, 522, 531):
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/rainy-6.svg";
+        break;
+      case 600:
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/snowy-1.svg";
+        break;
+      case 601:
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/snowy-2.svg";
+        break;
+      case 602:
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/snowy-3.svg";
+        break;
+      case 611:
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/snowy-4.svg";
+        break;
+      case 612:
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/snowy-5.svg";
+        break;
+      case (613, 615, 616, 620, 621, 622):
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/snowy-6.svg";
+        break;
+      case 800:
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/day.svg";
+        break;
+      /*default:
+        weatherIcon = document.querySelector("#main-icon").src =
+          "images/animated-icons/cloudy.svg";*/
+    }
   }
 
   function changeSmallTemperatureCurrent(response) {
