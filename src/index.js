@@ -61,6 +61,13 @@ function changeCityTemp(event) {
     mainTemperature.innerHTML = Math.round(celciusTemperature);
     let windSpeed = document.querySelector("#wind-speed");
     windSpeed.innerHTML = Math.round(response.data.wind.speed);
+    let weatherDescription = document.querySelector("#weather-description");
+    weatherDescription.innerHTML = response.data.weather[0].description;
+    let weatherWords = weatherDescription.innerHTML.replace(
+      /(^\w{1})|(\s+\w{1})/g,
+      (letter) => letter.toUpperCase()
+    );
+    weatherDescription.innerHTML = weatherWords;
   }
 
   function changeSmallTemperature(response) {
@@ -129,6 +136,13 @@ function changeCityAndTemp(event) {
     mainCity.innerHTML = response.data.name;
     let windSpeed = document.querySelector("#wind-speed");
     windSpeed.innerHTML = Math.round(response.data.wind.speed);
+    let weatherDescription = document.querySelector("#weather-description");
+    weatherDescription.innerHTML = response.data.weather[0].description;
+    let weatherWords = weatherDescription.innerHTML.replace(
+      /(^\w{1})|(\s+\w{1})/g,
+      (letter) => letter.toUpperCase()
+    );
+    weatherDescription.innerHTML = weatherWords;
   }
 
   function changeSmallTemperatureCurrent(response) {
