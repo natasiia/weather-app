@@ -74,7 +74,9 @@ body {
   font-size: 1rem;
 }
 
-.card-text {
+.card-text,
+.wind,
+#weather-description {
   font-size: 0.9rem;
 }
 

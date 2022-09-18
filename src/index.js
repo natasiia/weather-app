@@ -59,6 +59,8 @@ function changeCityTemp(event) {
     let mainTemperature = document.querySelector("#main-temp");
     celciusTemperature = response.data.main.temp;
     mainTemperature.innerHTML = Math.round(celciusTemperature);
+    let windSpeed = document.querySelector("#wind-speed");
+    windSpeed.innerHTML = Math.round(response.data.wind.speed);
   }
 
   function changeSmallTemperature(response) {
@@ -125,7 +127,8 @@ function changeCityAndTemp(event) {
     mainTemperature.innerHTML = Math.round(response.data.main.temp);
     let mainCity = document.querySelector(".main-city");
     mainCity.innerHTML = response.data.name;
-    console.log(response);
+    let windSpeed = document.querySelector("#wind-speed");
+    windSpeed.innerHTML = Math.round(response.data.wind.speed);
   }
 
   function changeSmallTemperatureCurrent(response) {
