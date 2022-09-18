@@ -57,7 +57,8 @@ function changeCityTemp(event) {
 
   function changeTemperature(response) {
     let mainTemperature = document.querySelector("#main-temp");
-    mainTemperature.innerHTML = Math.round(response.data.main.temp);
+    celciusTemperature = response.data.main.temp;
+    mainTemperature.innerHTML = Math.round(celciusTemperature);
   }
 
   function changeSmallTemperature(response) {
@@ -108,28 +109,6 @@ nextDay3.innerHTML = days[nextDayName(currentTime.getDay() + 3)];
 let nextDay4 = document.querySelector("#next-day4");
 nextDay4.innerHTML = days[nextDayName(currentTime.getDay() + 4)];
 
-function convert(event) {
-  event.preventDefault();
-  let mainTemp = document.querySelector("#main-temp");
-  if (mainTemp.innerHTML < 45) {
-    mainTemp.innerHTML = Math.round(1.8 * mainTemp.innerHTML + 32);
-  }
-}
-
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", convert);
-
-function convertBack(event) {
-  event.preventDefault();
-  let mainTemp = document.querySelector("#main-temp");
-  if (mainTemp.innerHTML > 45) {
-    mainTemp.innerHTML = Math.round(((mainTemp.innerHTML - 32) * 5) / 9);
-  }
-}
-
-let celcius = document.querySelector("#celcius");
-celcius.addEventListener("click", convertBack);
-
 if (currentTime.getHours() >= 19 || currentTime.getHours() < 7) {
   document.body.style.backgroundImage = "url('../images/night-desert.jpg')";
   document.getElementById("card11").classList.remove("card-1");
@@ -141,6 +120,7 @@ if (currentTime.getHours() >= 19 || currentTime.getHours() < 7) {
 function changeCityAndTemp(event) {
   event.preventDefault();
   function changeTemperature(response) {
+    celciusTemperature = response.data.main.temp;
     let mainTemperature = document.querySelector("#main-temp");
     mainTemperature.innerHTML = Math.round(response.data.main.temp);
     let mainCity = document.querySelector(".main-city");
@@ -181,3 +161,24 @@ function changeCityAndTemp(event) {
 
 let currentCityTemp = document.getElementById("button-location");
 currentCityTemp.addEventListener("click", changeCityAndTemp);
+
+function showFahrenheitTemperature(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#main-temp");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function showCelciusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#main-temp");
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
+}
+
+let celciusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+
+let celciusLink = document.querySelector("#celcius");
+celciusLink.addEventListener("click", showCelciusTemperature);
