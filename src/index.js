@@ -275,9 +275,9 @@ function changeCityAndTemp(event) {
         weatherIcon = document.querySelector("#main-icon").src =
           "images/animated-icons/day.svg";
         break;
-      /*default:
+      default:
         weatherIcon = document.querySelector("#main-icon").src =
-          "images/animated-icons/cloudy.svg";*/
+          "images/animated-icons/cloudy.svg";
     }
   }
 
