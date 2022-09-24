@@ -69,7 +69,6 @@ function changeCityTemp(event) {
     );
     weatherDescription.innerHTML = weatherWords;
     let weatherNumber = response.data.weather[0].id;
-    console.log(weatherNumber);
     let weatherIcon;
     switch (weatherNumber) {
       case (200, 201, 202, 210, 211, 212, 221, 230, 231, 232):
@@ -155,6 +154,280 @@ function changeCityTemp(event) {
     smallTemp4.innerHTML = `${Math.round(
       response.data.list[3].main.temp_max
     )}°C / ${Math.round(response.data.list[3].main.temp_min)}°C`;
+
+    let weatherNumber1 = response.data.list[0].weather[0].id;
+    let weatherNumber2 = response.data.list[1].weather[0].id;
+    let weatherNumber3 = response.data.list[2].weather[0].id;
+    let weatherNumber4 = response.data.list[3].weather[0].id;
+
+    let smallWeatherIcon1;
+    let smallWeatherIcon2;
+    let smallWeatherIcon3;
+    let smallWeatherIcon4;
+
+    switch (weatherNumber1) {
+      case (200, 201, 202, 210, 211, 212, 221, 230, 231, 232):
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/thunder.svg";
+        break;
+      case (300, 301, 302, 310, 311, 312, 313, 314, 321):
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/rainy-7.svg";
+        break;
+      case 500:
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/rainy-1.svg";
+        break;
+      case 501:
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/rainy-2.svg";
+        break;
+      case 502:
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/rainy-3.svg";
+        break;
+      case 503:
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/rainy-4.svg";
+        break;
+      case (504, 511):
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/rainy-5.svg";
+        break;
+      case (520, 521, 522, 531):
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/rainy-6.svg";
+        break;
+      case 600:
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/snowy-1.svg";
+        break;
+      case 601:
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/snowy-2.svg";
+        break;
+      case 602:
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/snowy-3.svg";
+        break;
+      case 611:
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/snowy-4.svg";
+        break;
+      case 612:
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/snowy-5.svg";
+        break;
+      case (613, 615, 616, 620, 621, 622):
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/snowy-6.svg";
+        break;
+      case 800:
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/day.svg";
+        break;
+      default:
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/cloudy.svg";
+    }
+
+    switch (weatherNumber2) {
+      case (200, 201, 202, 210, 211, 212, 221, 230, 231, 232):
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/thunder.svg";
+        break;
+      case (300, 301, 302, 310, 311, 312, 313, 314, 321):
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/rainy-7.svg";
+        break;
+      case 500:
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/rainy-1.svg";
+        break;
+      case 501:
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/rainy-2.svg";
+        break;
+      case 502:
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/rainy-3.svg";
+        break;
+      case 503:
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/rainy-4.svg";
+        break;
+      case (504, 511):
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/rainy-5.svg";
+        break;
+      case (520, 521, 522, 531):
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/rainy-6.svg";
+        break;
+      case 600:
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/snowy-1.svg";
+        break;
+      case 601:
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/snowy-2.svg";
+        break;
+      case 602:
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/snowy-3.svg";
+        break;
+      case 611:
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/snowy-4.svg";
+        break;
+      case 612:
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/snowy-5.svg";
+        break;
+      case (613, 615, 616, 620, 621, 622):
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/snowy-6.svg";
+        break;
+      case 800:
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/day.svg";
+        break;
+      default:
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/cloudy.svg";
+    }
+
+    switch (weatherNumber3) {
+      case (200, 201, 202, 210, 211, 212, 221, 230, 231, 232):
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/thunder.svg";
+        break;
+      case (300, 301, 302, 310, 311, 312, 313, 314, 321):
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/rainy-7.svg";
+        break;
+      case 500:
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/rainy-1.svg";
+        break;
+      case 501:
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/rainy-2.svg";
+        break;
+      case 502:
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/rainy-3.svg";
+        break;
+      case 503:
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/rainy-4.svg";
+        break;
+      case (504, 511):
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/rainy-5.svg";
+        break;
+      case (520, 521, 522, 531):
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/rainy-6.svg";
+        break;
+      case 600:
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/snowy-1.svg";
+        break;
+      case 601:
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/snowy-2.svg";
+        break;
+      case 602:
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/snowy-3.svg";
+        break;
+      case 611:
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/snowy-4.svg";
+        break;
+      case 612:
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/snowy-5.svg";
+        break;
+      case (613, 615, 616, 620, 621, 622):
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/snowy-6.svg";
+        break;
+      case 800:
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/day.svg";
+        break;
+      default:
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/cloudy.svg";
+    }
+
+    switch (weatherNumber4) {
+      case (200, 201, 202, 210, 211, 212, 221, 230, 231, 232):
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/thunder.svg";
+        break;
+      case (300, 301, 302, 310, 311, 312, 313, 314, 321):
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/rainy-7.svg";
+        break;
+      case 500:
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/rainy-1.svg";
+        break;
+      case 501:
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/rainy-2.svg";
+        break;
+      case 502:
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/rainy-3.svg";
+        break;
+      case 503:
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/rainy-4.svg";
+        break;
+      case (504, 511):
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/rainy-5.svg";
+        break;
+      case (520, 521, 522, 531):
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/rainy-6.svg";
+        break;
+      case 600:
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/snowy-1.svg";
+        break;
+      case 601:
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/snowy-2.svg";
+        break;
+      case 602:
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/snowy-3.svg";
+        break;
+      case 611:
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/snowy-4.svg";
+        break;
+      case 612:
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/snowy-5.svg";
+        break;
+      case (613, 615, 616, 620, 621, 622):
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/snowy-6.svg";
+        break;
+      case 800:
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/day.svg";
+        break;
+      default:
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/cloudy.svg";
+    }
   }
 }
 
@@ -212,7 +485,6 @@ function changeCityAndTemp(event) {
     );
     weatherDescription.innerHTML = weatherWords;
     let weatherNumber = response.data.weather[0].id;
-    console.log(weatherNumber);
     let weatherIcon;
     switch (weatherNumber) {
       case (200, 201, 202, 210, 211, 212, 221, 230, 231, 232):
@@ -298,6 +570,280 @@ function changeCityAndTemp(event) {
     smallTemp4.innerHTML = `${Math.round(
       response.data.list[3].main.temp_max
     )}°C / ${Math.round(response.data.list[3].main.temp_min)}°C`;
+
+    let weatherNumber1 = response.data.list[0].weather[0].id;
+    let weatherNumber2 = response.data.list[1].weather[0].id;
+    let weatherNumber3 = response.data.list[2].weather[0].id;
+    let weatherNumber4 = response.data.list[3].weather[0].id;
+
+    let smallWeatherIcon1;
+    let smallWeatherIcon2;
+    let smallWeatherIcon3;
+    let smallWeatherIcon4;
+
+    switch (weatherNumber1) {
+      case (200, 201, 202, 210, 211, 212, 221, 230, 231, 232):
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/thunder.svg";
+        break;
+      case (300, 301, 302, 310, 311, 312, 313, 314, 321):
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/rainy-7.svg";
+        break;
+      case 500:
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/rainy-1.svg";
+        break;
+      case 501:
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/rainy-2.svg";
+        break;
+      case 502:
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/rainy-3.svg";
+        break;
+      case 503:
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/rainy-4.svg";
+        break;
+      case (504, 511):
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/rainy-5.svg";
+        break;
+      case (520, 521, 522, 531):
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/rainy-6.svg";
+        break;
+      case 600:
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/snowy-1.svg";
+        break;
+      case 601:
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/snowy-2.svg";
+        break;
+      case 602:
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/snowy-3.svg";
+        break;
+      case 611:
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/snowy-4.svg";
+        break;
+      case 612:
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/snowy-5.svg";
+        break;
+      case (613, 615, 616, 620, 621, 622):
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/snowy-6.svg";
+        break;
+      case 800:
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/day.svg";
+        break;
+      default:
+        smallWeatherIcon1 = document.querySelector("#small-weather1").src =
+          "images/animated-icons/cloudy.svg";
+    }
+
+    switch (weatherNumber2) {
+      case (200, 201, 202, 210, 211, 212, 221, 230, 231, 232):
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/thunder.svg";
+        break;
+      case (300, 301, 302, 310, 311, 312, 313, 314, 321):
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/rainy-7.svg";
+        break;
+      case 500:
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/rainy-1.svg";
+        break;
+      case 501:
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/rainy-2.svg";
+        break;
+      case 502:
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/rainy-3.svg";
+        break;
+      case 503:
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/rainy-4.svg";
+        break;
+      case (504, 511):
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/rainy-5.svg";
+        break;
+      case (520, 521, 522, 531):
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/rainy-6.svg";
+        break;
+      case 600:
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/snowy-1.svg";
+        break;
+      case 601:
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/snowy-2.svg";
+        break;
+      case 602:
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/snowy-3.svg";
+        break;
+      case 611:
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/snowy-4.svg";
+        break;
+      case 612:
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/snowy-5.svg";
+        break;
+      case (613, 615, 616, 620, 621, 622):
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/snowy-6.svg";
+        break;
+      case 800:
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/day.svg";
+        break;
+      default:
+        smallWeatherIcon2 = document.querySelector("#small-weather2").src =
+          "images/animated-icons/cloudy.svg";
+    }
+
+    switch (weatherNumber3) {
+      case (200, 201, 202, 210, 211, 212, 221, 230, 231, 232):
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/thunder.svg";
+        break;
+      case (300, 301, 302, 310, 311, 312, 313, 314, 321):
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/rainy-7.svg";
+        break;
+      case 500:
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/rainy-1.svg";
+        break;
+      case 501:
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/rainy-2.svg";
+        break;
+      case 502:
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/rainy-3.svg";
+        break;
+      case 503:
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/rainy-4.svg";
+        break;
+      case (504, 511):
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/rainy-5.svg";
+        break;
+      case (520, 521, 522, 531):
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/rainy-6.svg";
+        break;
+      case 600:
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/snowy-1.svg";
+        break;
+      case 601:
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/snowy-2.svg";
+        break;
+      case 602:
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/snowy-3.svg";
+        break;
+      case 611:
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/snowy-4.svg";
+        break;
+      case 612:
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/snowy-5.svg";
+        break;
+      case (613, 615, 616, 620, 621, 622):
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/snowy-6.svg";
+        break;
+      case 800:
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/day.svg";
+        break;
+      default:
+        smallWeatherIcon3 = document.querySelector("#small-weather3").src =
+          "images/animated-icons/cloudy.svg";
+    }
+
+    switch (weatherNumber4) {
+      case (200, 201, 202, 210, 211, 212, 221, 230, 231, 232):
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/thunder.svg";
+        break;
+      case (300, 301, 302, 310, 311, 312, 313, 314, 321):
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/rainy-7.svg";
+        break;
+      case 500:
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/rainy-1.svg";
+        break;
+      case 501:
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/rainy-2.svg";
+        break;
+      case 502:
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/rainy-3.svg";
+        break;
+      case 503:
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/rainy-4.svg";
+        break;
+      case (504, 511):
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/rainy-5.svg";
+        break;
+      case (520, 521, 522, 531):
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/rainy-6.svg";
+        break;
+      case 600:
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/snowy-1.svg";
+        break;
+      case 601:
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/snowy-2.svg";
+        break;
+      case 602:
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/snowy-3.svg";
+        break;
+      case 611:
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/snowy-4.svg";
+        break;
+      case 612:
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/snowy-5.svg";
+        break;
+      case (613, 615, 616, 620, 621, 622):
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/snowy-6.svg";
+        break;
+      case 800:
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/day.svg";
+        break;
+      default:
+        smallWeatherIcon4 = document.querySelector("#small-weather4").src =
+          "images/animated-icons/cloudy.svg";
+    }
   }
 
   function retrievePosition(position) {
